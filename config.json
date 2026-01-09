@@ -1,0 +1,33 @@
+{
+  "workspace_path": "./dual-socket-36core-dataset",
+  "exp_names": ["citymos_constant_workload", "citymos_vary_workload", "citymos_const_const_workload"],
+  "citymos_constant_workload": {
+    "enable": true,
+    "binary_name": ["citymos_const_single_pri", "citymos_const_numa_pri" , "citymos_const_multi_pri"],
+    "agent_number": [420000, 430000],
+    "speed_up_ratio": [25],
+    "task_size": [10000],
+    "policies": [0, 1, 2, 3, 4, 5],
+    "delay_tolerance": [30]
+  },
+
+  "citymos_const_const_workload": {
+    "enable": true,
+    "binary_name": ["citymos_const_single_pri", "citymos_const_numa_pri" , "citymos_const_const_multi_pri"],
+    "agent_number": [480000, 500000],
+    "speed_up_ratio": [25],
+    "task_size": [10000],
+    "policies": [0, 1, 2, 3, 4, 5],
+    "delay_tolerance": [30]
+  },
+
+  "citymos_vary_workload": {
+    "enable": true,
+    "binary_name": ["citymos_vary_single_pri", "citymos_vary_numa_pri","citymos_vary_multi_pri"],
+    "agent_number": [50, 55],
+    "speed_up_ratio": [28],
+    "task_size": [10000],
+    "policies": [0, 1, 2, 3, 4, 5],
+    "delay_tolerance": [30]
+  }
+}
